@@ -1,0 +1,3 @@
+locals {
+  component = "oauth-endpoint"
+}
