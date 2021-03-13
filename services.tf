@@ -15,7 +15,7 @@ resource "kubernetes_service" "middleware_oauth_service" {
       "app.kubernetes.io/part-of" : var.part_of
     }
     port {
-      port = 4181
+      port        = 4181
       target_port = 80
     }
   }

@@ -9,9 +9,5 @@ terraform {
     kubernetes = {
       source = "hashicorp/kubernetes"
     }
-    k8s = {
-      version = ">= 0.8.0"
-      source  = "banzaicloud/k8s"
-    }
   }
 }
