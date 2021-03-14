@@ -14,6 +14,9 @@ module "traefik_oauth_endpoint" {
     image_tag         = "latest"
     image_pull_policy = "Always"
     is_init           = false
+    ports = [{
+      container_port = 4181
+    }]
     simple_environment_variables = {
       "AUTH_HOST"     = var.oauth_host
       "COOKIE_DOMAIN" = var.oauth_cookie_domain
