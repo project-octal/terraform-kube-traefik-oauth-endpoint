@@ -8,7 +8,7 @@ module "traefik_oauth_endpoint" {
   labels    = var.labels
 
   containers = [{
-    oauth = {
+      name = "oauth"
       image_repository  = "registry.hub.docker.com"
       image_name        = "funkypenguin/traefik-forward-auth"
       image_tag         = "latest"
@@ -30,6 +30,5 @@ module "traefik_oauth_endpoint" {
           key  = "cookie_secret"
         }
       }
-    }
-  }]
+    }]
 }
