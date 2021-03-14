@@ -38,7 +38,3 @@ variable "oauth_oidc_issuer" {
   type        = string
   description = "https://<your keycloak URL>/auth/realms/master"
 }
-variable "oauth_secret" {
-  type        = string
-  description = "A random string to secure your cookie"
-}
