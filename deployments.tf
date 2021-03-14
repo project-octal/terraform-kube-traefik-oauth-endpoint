@@ -7,7 +7,7 @@ module "traefik_oauth_endpoint" {
   component = local.component
   labels    = var.labels
 
-  containers = {
+  containers = [{
     oauth = {
       image_repository  = "registry.hub.docker.com"
       image_name        = "funkypenguin/traefik-forward-auth"
@@ -31,5 +31,5 @@ module "traefik_oauth_endpoint" {
         }
       }
     }
-  }
+  }]
 }
