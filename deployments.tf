@@ -22,6 +22,7 @@ module "traefik_oauth_endpoint" {
       "COOKIE_DOMAIN" = var.oauth_cookie_domain
       "CLIENT_ID"     = var.oauth_client_id
       "OIDC_ISSUER"   = var.oauth_oidc_issuer
+      "LOG_LEVEL"     = "debug"
     }
     secret_environment_variables = {
       "CLIENT_SECRET" = {
