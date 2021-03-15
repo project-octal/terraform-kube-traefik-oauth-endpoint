@@ -15,8 +15,16 @@ resource "kubernetes_service" "middleware_oauth_service" {
       "app.kubernetes.io/part-of" : var.part_of
     }
     port {
-      port        = 4181
-      target_port = 80
+      name        = "http"
+      protocol    = "TCP"
+      port        = 80
+      target_port = 4181
+    }
+    port {
+      name        = "https"
+      protocol    = "TCP"
+      port        = 443
+      target_port = 4181
     }
   }
 }
