@@ -15,6 +15,43 @@ variable "labels" {
   description = "A map of string to add to use as the labels for this resource"
 }
 
+variable "replicas" {
+  type        = number
+  description = ""
+  default     = 2
+}
+variable "image_pull_policy" {
+  type        = string
+  description = ""
+  default     = "Always"
+}
+variable "cpu_request" {
+  type        = string
+  description = ""
+  default     = "25m"
+}
+variable "memory_request" {
+  type        = string
+  description = ""
+  default     = "32Mi"
+}
+variable "cpu_limit" {
+  type        = string
+  description = ""
+  default     = "50m"
+}
+variable "memory_limit" {
+  type        = string
+  description = ""
+  default     = "64Mi"
+}
+
+variable "log_level" {
+  type        = string
+  description = ""
+  default     = "info"
+}
+
 ####################
 ## OAUTH Settings ##
 ####################
