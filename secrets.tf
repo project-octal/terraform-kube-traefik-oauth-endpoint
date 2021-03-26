@@ -2,6 +2,7 @@ resource "random_password" "middleware_oauth_cookie_secret" {
   length           = 16
   special          = true
   override_special = "_%@"
+  lower            = true
 }
 
 resource "kubernetes_secret" "middleware_oauth" {
