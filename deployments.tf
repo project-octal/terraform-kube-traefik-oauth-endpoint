@@ -65,8 +65,8 @@ resource "kubernetes_deployment" "middleware_oauth_deployment" {
             name = "CLIENT_SECRET"
             value_from {
               secret_key_ref {
-                key  = kubernetes_secret.middleware_oauth.metadata[0].name
-                name = "client_secret"
+                name = kubernetes_secret.middleware_oauth.metadata[0].name
+                key  = "client_secret"
               }
             }
           }
@@ -75,8 +75,8 @@ resource "kubernetes_deployment" "middleware_oauth_deployment" {
             name = "SECRET"
             value_from {
               secret_key_ref {
-                key  = kubernetes_secret.middleware_oauth.metadata[0].name
-                name = "cookie_secret"
+                name = kubernetes_secret.middleware_oauth.metadata[0].name
+                key  = "cookie_secret"
               }
             }
           }
